@@ -2,37 +2,115 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.App-content {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(6px + 1vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.Content {
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding:20px 10px 0px 50px;
+  margin: 0 40px 0 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+
+@media (min-width: 800px) {
+  .Content {
+   
+    grid-template-columns: repeat(2, 1fr);
+    
   }
 }
+@media (min-width: 1200px) {
+  .Content {
+   
+    grid-template-columns: repeat(3, 1fr);
+    
+  }
+}
+@media (min-width: 1400px) {
+  .Content {
+   
+    grid-template-columns: repeat(4, 1fr);
+    
+  }
+}
+
+
+.Title{
+  text-align: center;
+}
+.Link{
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+.Loading{
+  display: flex;
+  padding: 0;
+  align-items: start;
+  width: 1000px;
+  margin:0;
+  position: relative;
+  
+}
+.Loading .Load{
+  position: relative;
+  width: 100%;
+  height: 5px;
+  border: 1px solid red;
+  animation: turn 4s  linear 1.75s;
+
+}
+.Loading .Load:before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: red;
+  box-shadow: 10px 0px 15px 0px red;
+  animation: load 0.9s  linear infinite;
+}
+
+@keyframes load {
+  0%{
+    width: 0%;
+  }
+  87.5%{
+    width: 100%;
+  }
+}
+
+.App-logo{
+  object-fit: scale-down;
+  width: 200px;
+  height: 200px;
+
+}
+
+.form{
+  padding: 0 0 25px 0;
+
+}
+.form button{
+  border: none;
+}
+
+.last-text  {
+  
+  font-size: 20px;
+  padding: 0 0 25px 0;
+}
+

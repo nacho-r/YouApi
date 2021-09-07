@@ -1,24 +1,43 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Search from './pages/Search/Search';
+import {Link, Route} from 'wouter'
+
+import Home from './pages/Home/Home'
+
+
 
 function App() {
+  
+ 
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <div className="App">
+        <section className="App-content">
+
+
+            <Link to="/">
+              
+              <img className="App-logo" alt="You Api Logo" src='http://pngimg.com/uploads/youtube/youtube_PNG15.png' />
+            </Link>
+
+          
+            <Route 
+            component={Home}
+            path='/' />
+            <Route 
+            component={Search}
+            path='/youapi/:search'/>
+            
+          
+
+          
+        </section>  
+
+      </div>
+    
   );
 }
 
