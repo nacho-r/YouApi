@@ -1,5 +1,11 @@
 
+
 # PREVIEW: https://ibb.co/JCn0m3S
+=======
+PREVIEW:
+https://ibb.co/JCn0m3S
+
+>>>>>>> 1d3f9b244a03adfbe9c458bbe3cafa2ce7d87767
 
 # Getting Started with Create React App
 
@@ -71,5 +77,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 
 
