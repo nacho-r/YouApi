@@ -31,8 +31,8 @@ export default function Home(){
         
             <h3 className='last-text'>Ultima Busqueda!</h3>
 
-            <div className='Content'>{
-                video.map((videos)=>
+            <div className='Content'>
+                {video.map((videos)=>
                     <Video 
                         key={videos.id } 
                         title={videos.title} 

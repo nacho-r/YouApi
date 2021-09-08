@@ -23,6 +23,23 @@
   padding:20px 10px 0px 50px;
   margin: 0 40px 0 20px;
 }
+.Content button{
+  border: none;
+  background: none;
+  cursor:pointer;
+
+}
+
+.Title-Channel{
+  width: 330px;
+  
+}
+.Channel{
+  color: #5d5d60;
+}
+.Title{
+  color: #fff;
+}
 
 
 @media (min-width: 800px) {
@@ -114,3 +131,34 @@
   padding: 0 0 25px 0;
 }
 
+
+.Video{
+  width: 500px;
+  height: 300px;
+  margin: 50px 0 100px 0;
+  border: 1px solid black;
+  
+  
+}
+@media (min-width: 800px) {
+  .Video{
+    width: 600px;
+    height: 400px;
+    
+  }
+}
+@media (min-width: 1200px) {
+  .Video{
+    width: 800px;
+    height: 500px;
+    margin: 0 0 15px 0;
+  }
+}
+
+
+.Video-content{
+  width: 330px;
+  height: 283.6px;
+  border: solid 5px black;
+  border-radius: 5%;
+}

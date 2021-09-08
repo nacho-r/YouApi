@@ -23,25 +23,25 @@ export default function Search({params}){
    
     if(loading) return <div className='Loading'><div className="Load"></div></div>
 
-    return(<div className='Content'>
+    return(<div >
         <iframe className="Video" src={url}>{error}</iframe>
         
-        {
-        
-
-        video.map(({url, id, title, img, channel})=>
-            <button key={(id)} onClick={()=>handleChange(url)} >
-            
-            <Videos 
-               
-                title={title} 
-                url={url} 
-                img={img}
-                channel={channel}
-            />
-            </button>
-           
-        ) } 
+        <div  className='Content'>
+        {video.map(({url, id, title, img, channel})=>
+            <div key={(id)}>
+                <button  onClick={()=>handleChange(url)} >
+                
+                <Videos 
+                
+                    title={title} 
+                    url={url} 
+                    img={img}
+                    channel={channel}
+                />
+                </button>
+           </div>
+        ) }
+        </div> 
         </div>
     )
 }

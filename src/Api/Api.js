@@ -1,9 +1,9 @@
-const key='AIzaSyChebyr5NBCrwKmGLnTC4jLFWI_UWTpThk'
+const key='AIzaSyB-CdftlCWeB2LNN8B0SQgdh5kptDUtqPY'
 
 
 
 export default function Api({search = ''}={}){
-    const apiURL= `https://www.googleapis.com/youtube/v3/search?part=snippet&key=${key}&type=video&q=${search}&maxResults=12`
+    const apiURL= `https://www.googleapis.com/youtube/v3/search?part=snippet&key=${key}&type=video&q=${search}&maxResults=28`
     
     return(
     

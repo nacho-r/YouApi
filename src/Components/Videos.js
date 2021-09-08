@@ -10,9 +10,10 @@ export default function Video({title, img, channel}){
            
             <div>
                 <img src={img}/>
-                <h4 className="Title">{title}</h4>
-                <div>
-                    <h4>{channel}</h4>
+                <div className="Title-Channel">
+                     <h4 className="Title">{title}</h4>
+                
+                    <h4 className="Channel">{channel}</h4>
                 </div>
             </div>
 
