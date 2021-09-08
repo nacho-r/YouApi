@@ -14,10 +14,9 @@ export default function Search({params}){
     const [url, setUrl]=useState()
 
 
-        const handleChange=(e)=>{
-            let resul=e.target.name
-            console.log(resul.toString())
-            let result = searchs.concat(resul)
+        const handleChange=(url)=>{
+            
+            let result = searchs.concat(url)
             console.log(result)
             setUrl(result)
         }
@@ -30,15 +29,15 @@ export default function Search({params}){
         {
         
 
-        video.map((videos)=>
-            <button name={(videos.url)} onClick={handleChange} >
+        video.map(({url, id, title, img, channel})=>
+            <button key={(id)} onClick={()=>handleChange(url)} >
             
             <Videos 
-                key={videos.id} 
-                title={videos.title} 
-                url={videos.url} 
-                img={videos.img}
-                channel={videos.channel}
+               
+                title={title} 
+                url={url} 
+                img={img}
+                channel={channel}
             />
             </button>
            

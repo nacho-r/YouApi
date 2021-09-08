@@ -2,12 +2,12 @@ import { useEffect, useState } from "react"
 import Api from '../Api/Api'
 
 
-export default function SetSearch({search}= {search:null}){
+export default function SetSearch({search}= {search:'software enginner'}){
     const [video, setVideo]=useState([])
     const [loading, setLoading] = useState(false)
 
 
-    const searchTo=search || localStorage.getItem('last') || 'popular'
+    const searchTo=search || localStorage.getItem('last') 
 
     useEffect(function(){
         setLoading(true)
