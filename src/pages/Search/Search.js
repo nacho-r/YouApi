@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import Videos from '../../Components/Videos'
-import setSearch from '../../Hooks/SetSearch'
+import setSearch from "../../Hooks/SetSearch";
 
 
 const error="Lo sentimos. Este vídeo no puede ser reproducido en tu navegador"
@@ -23,25 +23,21 @@ export default function Search({params}){
    
     if(loading) return <div className='Loading'><div className="Load"></div></div>
 
-    return(<div >
-        <iframe className="Video" src={url}>{error}</iframe>
-        
-        <div  className='Content'>
-        {video.map(({url, id, title, img, channel})=>
-            <div key={(id)}>
-                <button  onClick={()=>handleChange(url)} >
-                
-                <Videos 
-                
-                    title={title} 
-                    url={url} 
-                    img={img}
-                    channel={channel}
-                />
-                </button>
-           </div>
-        ) }
-        </div> 
+    return (
+      <div>
+        <iframe className="Video" src={url}>
+          {error}
+        </iframe>
+
+        <div className="Content">
+          {video.map(({ url, id, title, img, channel }) => (
+            <div key={id}>
+              <button onClick={() => handleChange(url)}>
+                <Videos title={title} url={url} img={img} channel={channel} />
+              </button>
+            </div>
+          ))}
         </div>
-    )
+      </div>
+    );
 }

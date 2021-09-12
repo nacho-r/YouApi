@@ -12,12 +12,11 @@ export default function SetSearch({search}= {search:''}){
     useEffect(function(){
         setLoading(true)
         
-        Api({search: searchTo})
-        .then((result) => {
-            setVideo(result)
-            setLoading(false)
-            localStorage.setItem('last', search)
-        })
+        Api({ search: searchTo }).then((result) => {
+          setVideo(result);
+          setLoading(false);
+          localStorage.setItem("last", search);
+        });
     
       }, [search])
 
